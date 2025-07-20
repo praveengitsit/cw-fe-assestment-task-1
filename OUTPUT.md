@@ -120,4 +120,4 @@ The components "BoxArea108" and "BoxArea97" had vague names. These have been cha
 
    1. For light mode, the general background of the page is the same color as the search text input. To be aligned with the fact that the search input should be the most prominent item in the page, we could have a more "gray" background, with the text input having the most luminous presence. 
 
-   2. Each TagList component should be responsible for fetching their own data, if they call separate endpoints. The fetch logic could be placed inside individual components for "Trending" and "For you" with the TagList component inside each of them. Additionally, to prevent prop-drilling for the search function, the whole thing could also 
+   2. Each TagList component should be responsible for fetching their own data, if they call separate endpoints. The fetch logic could be placed inside individual components for "Trending" and "For you" with the TagList component inside each of them. 
