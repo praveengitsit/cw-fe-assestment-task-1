@@ -1,10 +1,17 @@
-import { BoxArea108 } from "./BoxArea108";
+import { SearchBar } from "./SearchBar";
 
-export function BoxArea97() {
-  const onSearch = (search: string) => {
-    console.log(search);
-    // implementing the search logic is not required for this task
-  };
+interface SearchBarContainerProps {
+  searchValue: string;
+  setSearchValue: (value: string) => void;
+  onSearch: (search: string) => void;
+}
+
+export function SearchBarContainer({
+  searchValue,
+  setSearchValue,
+  onSearch,
+}: SearchBarContainerProps) {
+
 
   return (
     <div className="relative w-full max-w-5xl mx-auto rounded-xl overflow-hidden mt-8">
@@ -13,7 +20,9 @@ export function BoxArea97() {
         <h1 className="text-3xl md:text-5xl font-bold text-white">
           Search for words, phrases and meanings
         </h1>
-        <BoxArea108 initialValue="" onSearch={onSearch} />
+        <SearchBar searchValue={searchValue}
+          setSearchValue={setSearchValue}
+          onSearch={onSearch} />
       </div>
     </div>
   );
